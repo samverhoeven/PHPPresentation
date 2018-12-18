@@ -2000,7 +2000,7 @@ class PptCharts extends AbstractDecoratorWriter
 
         // $mainElement > c:scaling > c:orientation
         $objWriter->startElement('c:orientation');
-        $objWriter->writeAttribute('val', 'minMax');
+        $objWriter->writeAttribute('val', $oAxis->isReversed() ? 'maxMin' : 'minMax');
         $objWriter->endElement();
 
         if ($oAxis->getMaxBounds() != null) {
