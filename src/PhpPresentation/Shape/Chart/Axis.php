@@ -386,4 +386,25 @@ class Axis implements ComparableInterface
         $this->hashIndex = $value;
         return $this;
     }
+
+    /**
+     * @var bool
+     */
+    private $reversed = false;
+
+    /**
+     * @param $reversed
+     */
+    public function setReversed($reversed)
+    {
+        $this->reversed = (bool) $reversed;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isReversed()
+    {
+        return $this->reversed;
+    }
 }
